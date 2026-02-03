@@ -96,86 +96,49 @@ a{ color: inherit; text-decoration: none; }
 /* ===== PRESENTACIÓN ===== */
 
 .section--presentacion{
-  padding-top: 80px;  /* prueba 70 / 80 / 100 */
+  padding-top: 80px;
 }
 
-/* ===== GRID 3 IMÁGENES (MISMO TAMAÑO) ===== */
+/* ✅ TÍTULO CENTRADO “AL MEDIO” */
+.section--presentacion .section__title{
+  font-family: var(--serif);
+  font-size: clamp(34px, 3.2vw, 52px);
+  letter-spacing: -0.015em;
+  line-height: 1.1;
 
-.triple{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* ✅ 3 iguales */
-  gap: 22px;
+  /* clave del centrado */
+  width: fit-content;
+  margin: 0 auto 18px;
+  text-align: center;
+
+  /* para que no se pegue a los lados en pantallas chicas */
+  max-width: 980px;
+  padding: 0 16px;
 }
 
-/* ✅ MEDIA CARD sin sombra */
-.media-card{
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: none; /* ✅ sombra eliminada */
+/* Texto descriptivo bajo el título (centro el bloque, pero dejo lectura natural) */
+.section--presentacion .media-card__text{
+  max-width: 980px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+  color: rgba(20,18,16,.75);
+  font-weight: 500;
+  padding: 0 16px;
 }
 
-/* ✅ Imágenes (mismo comportamiento y altura controlada) */
-.media-card__img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: saturate(.95) contrast(.95);
-}
+/* ===== DIRECCIÓN + TELÉFONO (2 columnas centradas) ===== */
 
-/* ✅ Video */
-.media-card__media{
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-/* ✅ Altura igual para las 3 imágenes */
-.media-card--small{ height: 420px; }
-
-/* Sección de video (mantiene su altura) */
-.media-card--tall{ height: 440px; }
-
-/* Shade (si quieres sacarlo también me dices, por ahora lo dejo) */
-.media-card__shade{
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.12) 65%,
-    rgba(0,0,0,.08)
-  );
-}
-
-/* ✅ ELIMINADO COMPLETO: cualquier texto dentro de las imágenes del grid */
-.section--presentacion .media-card__content{
-  display: none;
-}
-
-/* ================= SECCIÓN FINAL ================= */
-
-.section--final{
-  padding-top: 28px;
-  padding-bottom: 60px;
-}
-
-/* DIRECCIÓN + TELÉFONO CENTRADOS */
 .final__grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   max-width: 860px;
-  margin: 0 auto;
+  margin: 18px auto 34px; /* ✅ separación limpia (sin <br>) */
   justify-items: center;
+  padding: 0 16px;
 }
 
-.final__block{
-  width: 360px;
-}
+.final__block{ width: 360px; }
 
 .final__label{
   margin: 0 0 8px;
@@ -193,31 +156,93 @@ a{ color: inherit; text-decoration: none; }
   color: rgba(20,18,16,.85);
 }
 
-/* BOTÓN ABAJO Y CENTRADO */
-.final__back{
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  margin-top: 24px;
+/* ===== GRID 3 IMÁGENES (MISMO TAMAÑO) ===== */
+
+.triple{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 22px;
+  margin-top: 18px;
 }
 
-/* BOTÓN */
-.btn-top{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border-radius: 999px;
-  background: linear-gradient(to right, #111, #1b1b1b);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: transform .35s ease, box-shadow .35s ease;
+/* ✅ MEDIA CARD sin sombra */
+.media-card{
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: none;
 }
 
-.btn-top:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0,0,0,.25);
+/* ✅ Imágenes */
+.media-card__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(.95) contrast(.95);
+}
+
+/* ✅ Video */
+.media-card__media{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ✅ Alturas */
+.media-card--small{ height: 420px; }
+.media-card--tall{ height: 440px; }
+
+/* Shade */
+.media-card__shade{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.12) 65%,
+    rgba(0,0,0,.08)
+  );
+}
+
+/* Contenido del video (se mantiene) */
+.media-card__content{
+  position: absolute;
+  left: 26px;
+  bottom: 22px;
+  width: min(760px, 68%);
+  color: rgba(255,255,255,.92);
+}
+
+.media-card__content--bottom{ bottom: 22px; }
+
+.media-card__star{ font-size: 18px; opacity: .9; margin-bottom: 10px; }
+
+.media-card__title{
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-size: clamp(20px, 3.2vw, 44px);
+  line-height: 1.05;
+}
+
+.media-card__line{
+  width: 64px;
+  height: 2px;
+  background: rgba(255,255,255,.55);
+  margin: 14px 0 14px;
+}
+
+.media-card__text{
+  margin: 0;
+  color: rgba(255,255,255,.78);
+  line-height: 1.6;
+  font-weight: 500;
+  max-width: 70ch;
 }
 
 /* FOOTER */
@@ -250,5 +275,9 @@ a{ color: inherit; text-decoration: none; }
   .final__block{
     width: 100%;
     text-align: center;
+  }
+
+  .section--presentacion .media-card__text{
+    text-align: left;
   }
 }
