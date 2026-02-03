@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maderas — Agricola los Lingues</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
@@ -28,21 +28,32 @@
 
     <section class="section section--presentacion" id="presentacion" aria-label="Presentación">
       <div class="wrap">
-        <h2 class="section__title">Artesanía. Velocidad. Confianza.</h2>
+        <h2 class="section__title">
+            ✦
+            Venta de maderas
+            Maderas de pino dimensionada de hasta 10 metros al por mayor.
+            </h2>
 
-        <article class="media-card">
-          <img class="media-card__img" src="imagenes/img_5.jpg" alt="Imagen presentación" />
-          <div class="media-card__shade"></div>
+        <!-- ✅ GRID 3 IMÁGENES (todas del mismo tamaño) -->
+        <div class="triple">
+          <!-- IZQUIERDA -->
+          <article class="media-card media-card--small">
+            <img class="media-card__img" src="imagenes/1_img.jpg" alt="Madera 1" />
+            <div class="media-card__shade"></div>
+          </article>
 
-          <div class="media-card__content">
-            <div class="media-card__star" aria-hidden="true">✦</div>
-            <h3 class="media-card__title">Venta de maderas</h3>
-            <div class="media-card__line"></div>
-            <p class="media-card__text">
-              Maderas de pino dimensionada de hasta 10 metros al por mayor.
-            </p>
-          </div>
-        </article>
+          <!-- CENTRO -->
+          <article class="media-card media-card--small">
+            <img class="media-card__img" src="imagenes/2_img.jpg" alt="Madera 2" />
+            <div class="media-card__shade"></div>
+          </article>
+
+          <!-- DERECHA -->
+          <article class="media-card media-card--small">
+            <img class="media-card__img" src="imagenes/3_img.jpg" alt="Madera 3" />
+            <div class="media-card__shade"></div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -73,13 +84,11 @@
       </div>
     </section>
 
-    <!-- ✅ SECCIÓN FINAL: DIRECCIÓN y TELÉFONO LADO A LADO + BOTÓN ABAJO -->
     <section class="section section--final" id="contacto" aria-label="Contacto y cierre">
       <div class="wrap final">
 
         <div class="final__grid">
 
-          <!-- DIRECCIÓN (izquierda) -->
           <aside class="final__col final__col--address">
             <div class="final__block">
               <p class="final__label">Dirección</p>
@@ -90,17 +99,16 @@
             </div>
           </aside>
 
-          <!-- TELÉFONO (derecha) -->
           <aside class="final__col final__col--phone">
             <div class="final__block">
               <p class="final__label">Teléfono</p>
               <p class="final__value">
-                +56 9 9377 545 - Javier Cañulef Caros
+                +56 9 9377 545 - Javier Cañulef Caros<br>
+                Llamadas o mensajes por Whatsapp
               </p>
             </div>
           </aside>
 
-          <!-- BOTÓN ABAJO DE AMBOS -->
           <div class="final__back">
             <button class="btn-top" data-scroll="#top">
               Volver arriba <span class="icon">↑</span>
