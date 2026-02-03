@@ -95,7 +95,6 @@ a{ color: inherit; text-decoration: none; }
 
 /* ===== PRESENTACIÓN ===== */
 
-/* ✅ ELIMINADO COMPLETO (título grande arriba) */
 .section--presentacion{
   padding-top: 80px;  /* prueba 70 / 80 / 100 */
 }
