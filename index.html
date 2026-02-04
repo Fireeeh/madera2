@@ -3,85 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maderas — Agricola los Lingues</title>
+  <title>Maderas — Agricola Los Lingues</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
   <main id="top">
-    <section class="hero" aria-label="Portada">
-      <div class="hero__slider">
-        <img class="hero__bg is-active" src="imagenes/img_3.jpg" alt="">
-        <img class="hero__bg" src="imagenes/img_2.jpeg" alt="">
-        <img class="hero__bg" src="imagenes/img_1.jpg" alt="">
-        <img class="hero__bg" src="imagenes/img_6.jpg" alt="">
-        <img class="hero__bg" src="imagenes/img_7.jpg" alt="">
-        <img class="hero__bg" src="imagenes/img_8.jpg" alt="">
-      </div>
-
-      <div class="hero__overlay"></div>
-
-      <div class="hero__content">
-        <h1 class="hero__title">Agricola los Lingues</h1>
-      </div>
-    </section>
-
-    <section class="section section--presentacion" id="presentacion" aria-label="Presentación">
-      <div class="wrap">
-
-        <h2 class="section__title">✦ Venta de madera dimensionada para tu proyecto ✦</h2>
-
-        <p class="media-card__text">
-          Comercializamos madera dimensionada en una amplia variedad de secciones y medidas, 
-          con largos continuos de hasta 10 metros, ideal para proyectos de construcción que requieren piezas estructurales de gran extensión.
-          Ofrecemos además servicio de corte a medida, ajustado a las especificaciones técnicas de cada proyecto.
-          Para cotizaciones, puede enviarnos su listado de requerimientos y recibirá respuesta oportuna con precios y disponibilidad.
-          Atendemos a empresas y particulares desde la provincia de Osorno.
-        </p>
-
-        <div class="final__grid">
-          <aside class="final__col final__col--address">
-            <div class="final__block">
-              <p class="final__label">Dirección</p>
-              <p class="final__value">
-                Fundo Los Lingues, San Pablo Osorno,<br>
-                Región de Los Lagos, Chile.<br>
-              </p>
-            </div>
-          </aside>
-
-          <aside class="final__col final__col--phone">
-            <div class="final__block">
-              <p class="final__label">Teléfono</p>
-              <p class="final__value">
-                +56 9 9377 545 - Javier Cañulef Caros<br>
-                Llamadas o mensajes por Whatsapp
-              </p>
-            </div>
-          </aside>
-        </div>
-
-        <!-- ✅ GRID 3 IMÁGENES (todas del mismo tamaño) -->
-        <div class="triple">
-          <article class="media-card media-card--small">
-            <img class="media-card__img" src="imagenes/1_img.jpeg" alt="Madera 1" />
-            <div class="media-card__shade"></div>
-          </article>
-
-          <article class="media-card media-card--small">
-            <img class="media-card__img" src="imagenes/2_img.jpeg" alt="Madera 2" />
-            <div class="media-card__shade"></div>
-          </article>
-
-          <article class="media-card media-card--small">
-            <img class="media-card__img" src="imagenes/3_img.jpeg" alt="Madera 3" />
-            <div class="media-card__shade"></div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
     <section class="section" id="vision" aria-label="Visión">
       <div class="wrap">
         <article class="media-card media-card--tall">
@@ -95,12 +22,12 @@
             preload="metadata"
           ></video>
 
-          <div class="media-card__shade"></div>
+          <div class="media-card__shade" aria-hidden="true"></div>
 
-          <div class="media-card__content media-card__content--bottom">
+          <div class="media-card__content">
             <div class="media-card__star" aria-hidden="true">✦</div>
-            <h3 class="media-card__title">Precisión, fuerza y continuidad</h3>
-            <div class="media-card__line"></div>
+            <h3 class="media-card__title">Agricola Los Lingues</h3>
+            <div class="media-card__line" aria-hidden="true"></div>
             <p class="media-card__text">
               En Agricola los Lingues, la confianza que se construye día a día.
             </p>
@@ -109,18 +36,79 @@
       </div>
     </section>
 
+    <section class="section section--presentacion" id="presentacion" aria-label="Presentación">
+      <div class="wrap">
+        <h2 class="section__title">✦ Venta de madera dimensionada para tu proyecto ✦</h2>
+
+        <p class="presentacion__text">
+          Comercializamos madera dimensionada en una amplia variedad de secciones y medidas,
+          con largos continuos de hasta 10 metros, ideal para proyectos de construcción que requieren
+          piezas estructurales de gran extensión. Ofrecemos además servicio de corte a medida, ajustado
+          a las especificaciones técnicas de cada proyecto. Para cotizaciones, puede enviarnos su listado
+          de requerimientos y recibirá respuesta oportuna con precios y disponibilidad. Atendemos a empresas
+          y particulares desde la provincia de Osorno.
+        </p>
+
+        <div class="final__grid" aria-label="Información de contacto">
+          <aside class="final__col">
+            <div class="final__block">
+              <p class="final__label">Dirección</p>
+              <p class="final__value">
+                Fundo Los Lingues, San Pablo, Osorno,<br />
+                Región de Los Lagos, Chile.
+              </p>
+            </div>
+          </aside>
+
+          <aside class="final__col">
+            <div class="final__block">
+              <p class="final__label">Teléfono</p>
+              <p class="final__value">
+                +56 9 9377 545 — Javier Cañulef Caros<br />
+                Llamadas o mensajes por WhatsApp
+              </p>
+            </div>
+          </aside>
+        </div>
+
+        <div class="triple" aria-label="Galería de madera">
+          <article class="media-card media-card--small">
+            <img class="media-card__img" src="imagenes/1_img.jpeg" alt="Madera dimensionada, imagen 1" loading="lazy" />
+            <div class="media-card__shade" aria-hidden="true"></div>
+          </article>
+
+          <article class="media-card media-card--small">
+            <img class="media-card__img" src="imagenes/2_img.jpeg" alt="Madera dimensionada, imagen 2" loading="lazy" />
+            <div class="media-card__shade" aria-hidden="true"></div>
+          </article>
+
+          <article class="media-card media-card--small">
+            <img class="media-card__img" src="imagenes/3_img.jpeg" alt="Madera dimensionada, imagen 3" loading="lazy" />
+            <div class="media-card__shade" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--final" id="contacto" aria-label="Contacto y cierre">
       <div class="wrap final">
         <footer class="footer">
           <p>Copyright © 2026 Agrícola Los Lingues Ltda.</p>
-          <p>Developed by <a href="https://www.linkedin.com/in/mackarenafloresg/" aria-label="Autor">Mackarena Flores</a></p>
-          <p>Powered by <a aria-label="Tecnología">HTML · CSS · JavaScript</a></p>
+
+          <p>
+            Developed by
+            <a href="https://www.linkedin.com/in/mackarenafloresg/" target="_blank" rel="noopener noreferrer">
+              Mackarena Flores
+            </a>
+          </p>
+
+          <p>Powered by <span aria-label="Tecnología">HTML · CSS · JavaScript</span></p>
         </footer>
       </div>
     </section>
   </main>
 
-  <div class="toast" id="toast"></div>
+  <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
   <script src="app.js"></script>
 </body>
 </html>
