@@ -115,7 +115,12 @@ a{
   grid-template-columns: 1fr 1fr 1fr;
   gap: 22px;
   margin-top: 12px;
-  margin-bottom: 32px; /* ✅ MÁS ESPACIO bajo las imágenes */
+  margin-bottom: 32px;
+}
+
+/* ❌ Quitar overlay en imágenes */
+.triple .media-card__shade{
+  display: none;
 }
 
 /* ================= MEDIA CARD ================= */
@@ -125,7 +130,13 @@ a{
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid rgba(0,0,0,.08);
+
+  /* ✅ SOMBRA FLOTANTE (video + imágenes) */
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.18),
+    0 4px 10px rgba(0,0,0,.08);
 }
+
 
 .media-card__img,
 .media-card__media{
@@ -142,7 +153,7 @@ a{
 .media-card--small{ height: 420px; }
 .media-card--tall{ height: 440px; }
 
-/* Overlay */
+/* Overlay (solo para video) */
 .media-card__shade{
   position: absolute;
   inset: 0;
