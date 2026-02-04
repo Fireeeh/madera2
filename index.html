@@ -9,42 +9,36 @@
 
 <body>
   <main id="top">
-    <section class="section" id="vision" aria-label="Visión">
-      <div class="wrap">
-        <article class="media-card media-card--tall">
-          <video
-            class="media-card__media"
-            src="video/video_1.mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          ></video>
 
-          <div class="media-card__shade" aria-hidden="true"></div>
-
-          <div class="media-card__content">
-            <div class="media-card__star" aria-hidden="true">✦</div>
-            <h3 class="media-card__title">Agricola Los Lingues</h3>
-            <div class="media-card__line" aria-hidden="true"></div>
-            <p class="media-card__text">
-              En Agricola los Lingues, la confianza que se construye día a día.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
+    <!-- ✅ PRESENTACIÓN (3 IMÁGENES ARRIBA) -->
     <section class="section section--presentacion" id="presentacion" aria-label="Presentación">
       <div class="wrap">
+
+        <!-- 🔼 3 IMÁGENES ARRIBA -->
+        <div class="triple" aria-label="Galería de madera">
+          <article class="media-card media-card--small">
+            <img class="media-card__img" src="imagenes/1_img.jpeg" alt="Madera dimensionada, imagen 1" loading="lazy" />
+            <div class="media-card__shade" aria-hidden="true"></div>
+          </article>
+
+          <article class="media-card media-card--small">
+            <img class="media-card__img" src="imagenes/2_img.jpeg" alt="Madera dimensionada, imagen 2" loading="lazy" />
+            <div class="media-card__shade" aria-hidden="true"></div>
+          </article>
+
+          <article class="media-card media-card--small">
+            <img class="media-card__img" src="imagenes/3_img.jpeg" alt="Madera dimensionada, imagen 3" loading="lazy" />
+            <div class="media-card__shade" aria-hidden="true"></div>
+          </article>
+        </div>
+
         <h2 class="section__title">✦ Venta de madera dimensionada para tu proyecto ✦</h2>
 
         <p class="presentacion__text">
           Comercializamos madera dimensionada en una amplia variedad de secciones y medidas,
           con largos continuos de hasta 10 metros, ideal para proyectos de construcción que requieren
           piezas estructurales de gran extensión. Ofrecemos además servicio de corte a medida, ajustado
-          a las especificaciones técnicas de cada proyecto. Para cotizaciones, puede enviarnos su listado
+          a las especificificaciones técnicas de cada proyecto. Para cotizaciones, puede enviarnos su listado
           de requerimientos y recibirá respuesta oportuna con precios y disponibilidad. Atendemos a empresas
           y particulares desde la provincia de Osorno.
         </p>
@@ -70,23 +64,34 @@
             </div>
           </aside>
         </div>
+      </div>
+    </section>
 
-        <div class="triple" aria-label="Galería de madera">
-          <article class="media-card media-card--small">
-            <img class="media-card__img" src="imagenes/1_img.jpeg" alt="Madera dimensionada, imagen 1" loading="lazy" />
-            <div class="media-card__shade" aria-hidden="true"></div>
-          </article>
+    <!-- ✅ VIDEO ABAJO (donde antes estaban las 3 fotos) -->
+    <section class="section" id="vision" aria-label="Visión">
+      <div class="wrap">
+        <article class="media-card media-card--tall">
+          <video
+            class="media-card__media"
+            src="video/video_1.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          ></video>
 
-          <article class="media-card media-card--small">
-            <img class="media-card__img" src="imagenes/2_img.jpeg" alt="Madera dimensionada, imagen 2" loading="lazy" />
-            <div class="media-card__shade" aria-hidden="true"></div>
-          </article>
+          <div class="media-card__shade" aria-hidden="true"></div>
 
-          <article class="media-card media-card--small">
-            <img class="media-card__img" src="imagenes/3_img.jpeg" alt="Madera dimensionada, imagen 3" loading="lazy" />
-            <div class="media-card__shade" aria-hidden="true"></div>
-          </article>
-        </div>
+          <div class="media-card__content">
+            <div class="media-card__star" aria-hidden="true">✦</div>
+            <h3 class="media-card__title">Agricola Los Lingues</h3>
+            <div class="media-card__line" aria-hidden="true"></div>
+            <p class="media-card__text">
+              En Agricola los Lingues, la confianza que se construye día a día.
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 

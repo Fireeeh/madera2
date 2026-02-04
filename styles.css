@@ -58,22 +58,24 @@ a{
   white-space: nowrap;
 
   width: fit-content;
-  margin: 0 auto 26px; /* ⬅️ más aire bajo el título */
+  margin: 0 auto 26px;
   text-align: center;
 
   max-width: none;
   padding: 0;
 }
 
-/* 🔑 AJUSTE DEFINITIVO */
 .presentacion__text{
-  max-width: 980px;
+  max-width: 1100px;
   margin: 0 auto 32px;
-  padding: 32px 16px 0;   /* ⬅️ baja claramente el texto */
-  line-height: 1.7;
+  padding: 16px 16px 0;
+
+  font-size: 22px;
+  line-height: 1.75;
+  text-align: justify;
+
   color: rgba(20,18,16,.75);
   font-weight: 500;
-  font-size: 20px;
 }
 
 /* ================= CONTACTO ================= */
@@ -113,7 +115,7 @@ a{
   grid-template-columns: 1fr 1fr 1fr;
   gap: 22px;
   margin-top: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 32px; /* ✅ MÁS ESPACIO bajo las imágenes */
 }
 
 /* ================= MEDIA CARD ================= */
