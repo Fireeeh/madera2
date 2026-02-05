@@ -60,9 +60,6 @@ a{
   width: fit-content;
   margin: 0 auto 26px;
   text-align: center;
-
-  max-width: none;
-  padding: 0;
 }
 
 .presentacion__text{
@@ -112,14 +109,27 @@ a{
 
 .triple{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
   margin-top: 12px;
   margin-bottom: 32px;
 }
 
+.double{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 12px;
+  margin-bottom: 32px;
+
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ❌ Quitar overlay en imágenes */
-.triple .media-card__shade{
+.triple .media-card__shade,
+.double .media-card__shade{
   display: none;
 }
 
@@ -131,12 +141,11 @@ a{
   overflow: hidden;
   border: 1px solid rgba(0,0,0,.08);
 
-  /* ✅ SOMBRA FLOTANTE (video + imágenes) */
+  /* SOMBRA GLOBAL */
   box-shadow:
     0 12px 28px rgba(0,0,0,.18),
     0 4px 10px rgba(0,0,0,.08);
 }
-
 
 .media-card__img,
 .media-card__media{
@@ -205,6 +214,15 @@ a{
   max-width: 70ch;
 }
 
+/* ======================================================
+   🚫 QUITAR SOMBRA SOLO A LAS 2 IMÁGENES CENTRADAS
+   ====================================================== */
+
+.double .media-card{
+  box-shadow: none;
+  border: none;
+}
+
 /* ================= FOOTER ================= */
 
 .footer{
@@ -228,6 +246,7 @@ a{
 
 @media (max-width: 980px){
   .triple{ grid-template-columns: 1fr; }
+  .double{ grid-template-columns: 1fr; }
 
   .final__grid{
     grid-template-columns: 1fr;
